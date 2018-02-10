@@ -1,5 +1,7 @@
-<table ng-controller='HomeCtrl' >
-  <tr ng-repeat='room in HomeCtrl.rooms'>
-    <div>Hello world!</div>
-  </tr>
+<table ng-controller='HomeCtrl as home' >
+  <tr ng-repeat='room in home.rooms'>
+  <td >
+    {{ room.$value }}
+  </td>
+</tr>
 </table>

@@ -1,13 +1,14 @@
 (function() {
-  function Room($firebaseArray) {
+  function RoomService($firebaseArray) {
     var Room = {};
     var ref = firebase.database().ref().child('rooms');
     var rooms = $firebaseArray(ref);
+    Room.all = rooms;
 
     return Room;
   }
 
   angular
     .module('bloc-chat')
-    .factory('Room', ['$firebaseArray', Room]);
+    .factory('RoomService', ['$firebaseArray', RoomService]);
 })();
