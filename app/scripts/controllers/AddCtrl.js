@@ -1,15 +1,22 @@
 (function() {
-  function AddCtrl(RoomService, $uibModal) {
-    this.open = function() {
-       var modalInstance = $uibModal.open({
-                animation: true,
-                template: '<div class="alert alert-primary" role="alert"> This is a primary alert—check it out! </div>',
-                size: 'sm'
-            });
+  function AddCtrl(RoomService, $uibModal, $scope) {
+    $scope.openModal = function () {
+    $uibModal.open({
+      templateUrl: '/modal.html',
+      controller: function ($scope, $uibModalInstance) {
+        $scope.ok = function () {
+          $uibModalInstance.close();
+        };
+
+        $scope.cancel = function () {
+          $uibModalInstance.dismiss('cancel');
+        };
+      }
+    })
     }
   }
 
   angular
     .module('bloc-chat')
-    .controller('AddCtrl', ['RoomService', '$uibModal', AddCtrl]);
+    .controller('AddCtrl', ['RoomService', '$uibModal', '$scope', AddCtrl]);
 })();
