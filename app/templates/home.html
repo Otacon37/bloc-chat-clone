@@ -1,7 +1,11 @@
-<table ng-controller='HomeCtrl as home' >
+<div ng-controller='HomeCtrl as home' >
+  <table>
   <tr ng-repeat='room in home.rooms'>
-  <td >
+    <td >
     {{ room.$value }}
-  </td>
-</tr>
-</table>
+    </td>
+  </tr>
+  </table>
+  <button ng-controller='HomeCtrl as home' ng-click ="home.add(home.rooms.length)">Stank engager</button>
+  <button ng-controller='AddCtrl as add' ng-click="add.open()">Add</button>
+</div>
