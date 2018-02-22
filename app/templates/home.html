@@ -6,8 +6,8 @@
     </td>
   </tr>
   </table>
-  <button ng-controller='HomeCtrl as home' ng-click ="home.add(home.rooms.length)">Stank engager</button>
+  <button ng-controller='HomeCtrl as home' ng-click ="home.add(home.rooms.length)">Create Room</button>
 </div>
-<div>
-  <button ng-controller = 'AddCtrl' class="btn btn-primary" type="button" ng-click="openModal()">Open modal</button>
+<div ng-controller="AddCtrl" class="container">
+    <button class="btn btn-primary" type="button" ng-click="openModal()">Open modal</button>
 </div>
