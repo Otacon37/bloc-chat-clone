@@ -7,10 +7,9 @@
     Room.all = rooms;
 
     Room.add = function(roomNumber) {
-      
-      rooms.$add('room' + (roomNumber + 1)).then(function(room) {
+
+      rooms.$add($element.querySelector(roomname)).then(function(room) {
         var id = room.key;
-        console.log('added record with id' + id);
         rooms.$indexFor(id);
       });
     }

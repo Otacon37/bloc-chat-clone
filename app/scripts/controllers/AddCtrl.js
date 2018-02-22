@@ -2,7 +2,7 @@
   function AddCtrl(RoomService, $uibModal, $scope) {
     $scope.openModal = function () {
     $uibModal.open({
-      templateUrl: 'modal.html',
+      templateUrl: '/templates/modal.html',
       controller: function ($scope, $uibModalInstance) {
         $scope.ok = function () {
           $uibModalInstance.close();
