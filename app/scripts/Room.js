@@ -8,7 +8,7 @@
 
     Room.add = function(roomNumber) {
 
-      rooms.$add($element.querySelector(roomname)).then(function(room) {
+      rooms.$add('new room').then(function(room) {
         var id = room.key;
         rooms.$indexFor(id);
       });
