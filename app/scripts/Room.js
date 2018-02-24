@@ -1,14 +1,19 @@
 (function() {
-  function RoomService($firebaseArray) {
+  function RoomService($firebaseArray, $scope) {
     var Room = {};
     var ref = firebase.database().ref().child('rooms');
     var rooms = $firebaseArray(ref);
+    var roomNameGetter = angular.module('bloc-chat', []).controller('HomeCtrl', function($scope) {
+       return $scope.newRoomName = "nameOfRoom";
+  });
+
 
     Room.all = rooms;
 
     Room.add = function(roomNumber) {
 
-      rooms.$add('new room').then(function(room) {
+      rooms.$add(roomNameGetter).then(function(room) {
+        console.log(roomNameGetter.newRoomName);
         var id = room.key;
         rooms.$indexFor(id);
       });
