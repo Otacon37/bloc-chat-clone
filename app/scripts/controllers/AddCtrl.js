@@ -4,7 +4,7 @@
     function uibModalController($scope, $uibModalInstance) {
       $scope.roomName;
        $scope.ok = function (roomName) {
-         RoomService.add(roomName);
+         Room.add(roomName);
          $uibModalInstance.close();
        };
 
@@ -16,17 +16,9 @@
     $scope.openModal = function () {
     $uibModal.open({
       templateUrl: '/templates/modal.html',
-      controller: function ($scope, $uibModalInstance) {
-        $scope.ok = function () {
-          $uibModalInstance.close();
-        };
-
-        $scope.cancel = function () {
-          $uibModalInstance.dismiss('cancel');
-        };
-      }
+      controller: uibModalController
     })
-    }
+  }
   }
 
   angular
