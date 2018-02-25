@@ -4,7 +4,7 @@
     function uibModalController($scope, $uibModalInstance) {
       $scope.roomName;
        $scope.ok = function (roomName) {
-         Room.add(roomName);
+         RoomService.add(roomName);
          $uibModalInstance.close();
        };
 
