@@ -1,17 +1,3 @@
-<!-- <div class="modal-header">
-    <h3 class="modal-title">Create new room</h3>
-</div>
-
-<div ng-controller='AddCtrl' class="modal-body">
-  <form name='createRoomForm'>
-    <label>Room Name:
-    <input type='text' ng-model='newRoomName'>
-</div>
-
-<div ng-controller = 'HomeCtrl as home' class="modal-footer">
-    <button class="btn btn-primary" type="button" ng-click='ok(home.add())'>Create Room</button>
-    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-</div> -->
 
 <div class="modal-header">
     <h3 class="modal-title">Create new room</h3>
@@ -23,7 +9,7 @@
     <input type='text' ng-model="roomName"/>
     </label>
   </div>
-  <div ng-controller='HomeCtrl as home' class='modal-footer'>
+  <div class='modal-footer'>
     <button class="btn btn-primary" type="button" ng-click='ok(roomName)'>Create Room</button>
     <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
 </div>
