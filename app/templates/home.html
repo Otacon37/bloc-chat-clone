@@ -1,7 +1,7 @@
 <div ng-controller='HomeCtrl as home' >
   <table>
   <tr ng-repeat='room in home.rooms'>
-    <td >
+    <td>
     {{ room.$value }}
     </td>
   </tr>
@@ -9,4 +9,18 @@
 </div>
 <div ng-controller="ModalCtrl" class="container">
     <button class="btn btn-primary" type="button" ng-click="openModal()">Create Room</button>
+</div>
+<div class='container'>
+  <table>
+    <tr>
+      <td>
+        'This is where the rooms will go'
+      </td>
+    </tr>
+    <tr>
+      <td>
+        'This would be the next room'
+      </td>
+    </tr>
+  </table>
 </div>
