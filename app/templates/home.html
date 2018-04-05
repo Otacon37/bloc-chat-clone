@@ -6,12 +6,12 @@
     </td>
   </tr>
   </table>
-  <div  ng-controller='ActiveRoomCtrl' class='container'>
-    <button ng-repeat='room in home.rooms'>{{ room.$value }}</button>
+  <div ng-controller='ActiveRoomCtrl' class='container'>
+    <h1>{{ currentlyActive.$value }}</h1>
+    <button ng-click='setActiveRoom(activeRoom)' class='btn btn-success' ng-repeat='activeRoom in home.rooms'>{{ activeRoom.$value }}</button>
   </div>
 </div>
 <div ng-controller="ModalCtrl" class="container">
     <button class="btn btn-primary" type="button" ng-click="openModal()">Create Room</button>
 </div>
 <div>
-  
