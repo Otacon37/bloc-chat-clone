@@ -10,6 +10,10 @@
       return $firebaseArray(currentRoomMessages);
    };
 
+   Message.send = function(newMessage) {
+     console.log('This be workin mon');
+  };
+
     return Message;
   }
 

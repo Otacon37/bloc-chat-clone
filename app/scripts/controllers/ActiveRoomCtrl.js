@@ -10,6 +10,7 @@
       messages: []
     };
 
+    $scope.sendMessage= Message.send;
 
   }
 

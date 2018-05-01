@@ -1,10 +1,10 @@
 <div ng-controller='HomeCtrl as home' >
   <table>
-  <tr ng-repeat='room in home.rooms'>
-    <td>
-    {{ room.$value }}
-    </td>
-  </tr>
+    <tr ng-repeat='room in home.rooms'>
+      <td>
+        {{ room.$value }}
+      </td>
+    </tr>
   </table>
   <div ng-controller='ActiveRoomCtrl' class='container'>
     <h1>{{ currentlyActive.name }}</h1>
@@ -12,9 +12,18 @@
     <div class='messages'>
       <h3 ng-repeat='message in currentlyActive.messages'>{{ message.content }}</h3>
     </div>
+    <form class="form-inline">
+      <div class="form-group">
+        <label class="sr-only" for="exampleInputAmount">Message</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="exampleInputAmount">
+        </div>
+      </div>
+      <button ng-click='sendMessage()' class="btn btn-primary">Send</button>
+    </form>
   </div>
 </div>
 <div ng-controller="ModalCtrl" class="container">
-    <button class="btn btn-primary" type="button" ng-click="openModal()">Create Room</button>
+  <button class="btn btn-primary" type="button" ng-click="openModal()">Create Room</button>
 </div>
 <div>
