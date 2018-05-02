@@ -16,10 +16,10 @@
       <div class="form-group">
         <label class="sr-only" for="exampleInputAmount">Message</label>
         <div class="input-group">
-          <input type="text" class="form-control" id="exampleInputAmount">
+          <input type="text" class="form-control" id="exampleInputAmount" ng-model='messageContent'>
         </div>
       </div>
-      <button ng-click='sendMessage()' class="btn btn-primary">Send</button>
+      <button ng-click='sendMessage(messageContent, currentlyActive.roomId)' class="btn btn-primary">Send</button>
     </form>
   </div>
 </div>
