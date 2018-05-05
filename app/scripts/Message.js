@@ -10,13 +10,15 @@
       return $firebaseArray(currentRoomMessages);
     };
 
-    Message.send = function(newMessage, roomId) {
+    Message.send = function(newMessage, roomId, userName) {
       var messageToBeSent = {
         content: newMessage,
         roomId: roomId,
         userName: $cookies.get('blocChatCurrentUser')
       };
       messages.$add(messageToBeSent);
+      console.log(messageToBeSent)
+      console.log(messageToBeSent.userName);
     };
 
     return Message;

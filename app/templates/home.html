@@ -11,6 +11,7 @@
     <button ng-click='setActiveRoom(activeRoom)' class='btn btn-success' ng-repeat='activeRoom in home.rooms'>{{ activeRoom.$value }}</button>
     <div class='messages'>
       <h3 ng-repeat='message in currentlyActive.messages'>{{ message.content }}</h3>
+      <h4>{{ message.userName }}</h4>
     </div>
     <form class="form-inline">
       <div class="form-group">
@@ -18,7 +19,7 @@
         <div class="input-group">
           <input type="text" class="form-control" id="exampleInputAmount" ng-model='messageContent'>
         </div>
-      </div>
+    </div>
       <button ng-click='sendMessage(messageContent, currentlyActive.roomId)' class="btn btn-primary">Send</button>
     </form>
   </div>

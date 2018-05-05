@@ -12,6 +12,8 @@
       messages: []
     };
 
+
+
     $scope.sendMessage= Message.send;
     $scope.messageContent;
 
