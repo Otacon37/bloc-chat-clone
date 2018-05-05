@@ -10,8 +10,9 @@
     <h1>{{ currentlyActive.name }}</h1>
     <button ng-click='setActiveRoom(activeRoom)' class='btn btn-success' ng-repeat='activeRoom in home.rooms'>{{ activeRoom.$value }}</button>
     <div class='messages'>
-      <h3 ng-repeat='message in currentlyActive.messages'>{{ message.content }}</h3>
-      <h4>{{ message.userName }}</h4>
+      <div class='message' ng-repeat='message in currentlyActive.messages'>
+        <h4>{{ message.userName }} : {{ message.content }}</h4>
+      </div>
     </div>
     <form class="form-inline">
       <div class="form-group">
